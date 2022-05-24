@@ -1,5 +1,13 @@
 # 2022-HybridIntelligence
 
+Notes:
+   test_submission_code.py and train_submission_code.py aer templates provided at the competition 
+   basalt_utils and kairos_minerl are packages prepared by the authors and are included  in requirements.txt 
+   folder "data" is where the dataset will be downloaded 
+   "train.zip" include trained models so feel free to use them
+
+Instructions:
+
 1/ install Ananaconda 
 
 2/ run conda-env create -f environment.yml
