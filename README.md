@@ -31,4 +31,5 @@ Instructions:
 11/ test.py still doesn't work as there was weirdly an issue with CUDA just there
 
 Original repository: https://github.com/viniciusguigo/kairos_minerl_basalt.git
+
 paper citation: https://arxiv.org/abs/2112.03482
