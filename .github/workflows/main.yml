@@ -15,8 +15,9 @@ jobs:
           python-version: '3.7'
       - name: create Anaconda environment
         run: |
-         conda-env create -f environment.yml
-         conda activate basalt
+     
+         $CONDA/bin/conda env create --file environment.yml 
+         $CONDA/bin/conda activate basalt
          
       - name: Install dependencies
         run: |
