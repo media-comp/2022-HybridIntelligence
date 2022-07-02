@@ -13,7 +13,11 @@ jobs:
       - uses: actions/setup-python@v3
         with:
           python-version: '3.7'
-
+      - name: create Anaconda environment
+        run: |
+         conda-env create -f environment.yml
+         conda activate basalt
+         
       - name: Install dependencies
         run: |
 
