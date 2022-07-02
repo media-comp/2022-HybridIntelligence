@@ -53,7 +53,7 @@ jobs:
 
       - name: Training
         run: |
-          pip install crowdai_api
+          pip install crowdai_api torchsummary 
           python train.py
           
 #      - name: Test
