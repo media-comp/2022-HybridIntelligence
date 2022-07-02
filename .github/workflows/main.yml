@@ -31,7 +31,7 @@ jobs:
          
       - name: Install requirements
         run: |
-         pip install --upgrade minerl
+         pip install minerl==0.4.0
          pip install -r requirements.txt
          
       - name: Install dataset
