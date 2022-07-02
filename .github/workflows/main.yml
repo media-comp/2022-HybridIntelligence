@@ -15,12 +15,11 @@ jobs:
           python-version: '3.7'
           update-conda: true
           conda-channels: anaconda, conda-forge
-          
-      - name: Install openjdk
-        run: 
-         sudo add-apt-repository ppa:openjdk-r/ppa
-         sudo apt-get update
-         sudo apt-get install openjdk-8-jdk
+      - uses: actions/setup-java@v3
+        with:
+         distribution: 'temurin' # See 'Supported distributions' for available options
+         java-version: '8'
+      - run: java -cp java HelloWorldApp
          
       - run: conda --version
       
