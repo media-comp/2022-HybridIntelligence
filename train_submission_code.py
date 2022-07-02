@@ -6,7 +6,7 @@ import numpy as np
 import aicrowd_helper
 import gym
 import minerl
-from utility.parser import Parser
+from parser import Parser
 from kairos_minerl import behavior_cloner
 import coloredlogs
 coloredlogs.install(logging.DEBUG)
