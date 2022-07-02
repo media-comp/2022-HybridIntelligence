@@ -1,0 +1,34 @@
+name: Test Actions
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+        with:
+          python-version: '3.7'
+
+      - name: Install dependencies
+        run: |
+        pip install opencv-python chardet
+        pip install -r requirements.txt
+
+      - name: Dataset
+        run: |
+          python downloadBasaltDataset.py
+          python dataProcessing.py
+          python compileLabels.py
+
+      - name: Training
+        run: |
+          python train.py
+          
+      - name: Test
+        run: |
+          python test.py
