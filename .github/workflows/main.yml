@@ -13,12 +13,14 @@ jobs:
       - uses: actions/setup-python@v3
         with:
           python-version: '3.7'
+          update-conda: true
+          conda-channels: anaconda, conda-forge
+      - run: conda --version
       - name: create Anaconda environment
         run: |
      
          $CONDA/bin/conda env create --file environment_cpu.yml 
-         $CONDA/bin/conda activate basalt
-         
+         $CONDA/bin/conda activate hybridintelligence
       - name: Install dependencies
         run: |
 
