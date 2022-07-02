@@ -21,18 +21,35 @@ jobs:
      
          $CONDA/bin/conda env create --file environment_cpu.yml 
          $CONDA/bin/activate hybridintelligence
-      - name: Install dependencies
+         
+      - name: Install requirements
         run: |
-
-         pip install opencv-python chardet
+         
          pip install -r requirements.txt
-
+         
+      - name: Install dataset
+        run: |
+         
+         pip install minerl==0.4.4
+         python downloadBasaltDataset.py
+         
+      - name: data processing
+        run: |
+        
+         pip install opencv-python numpy
+         python dataProcessing.py
+         
+      - name: label data
+        run: |
+         
+         pip install scikit-multilearn
+         python compileLabels.py
 
       - name: Dataset
         run: |
-          python downloadBasaltDataset.py
-          python dataProcessing.py
-          python compileLabels.py
+          
+          
+          
 
       - name: Training
         run: |
