@@ -24,7 +24,7 @@ jobs:
          
       - name: Install requirements
         run: |
-         $CONDA/bin/conda install minerl==0.4.4
+         $CONDA/bin/conda install minerl=0.4.4
          pip install -r requirements.txt
          
       - name: Install dataset
