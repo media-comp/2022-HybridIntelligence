@@ -3,7 +3,6 @@
 git+https://github.com/HumanCompatibleAI/imitation@master#egg=imitation
 ./basalt_utils
 ./kairos_minerl
-minerl
 crowdai_api
 aicrowd-repo2docker
 coloredlogs
