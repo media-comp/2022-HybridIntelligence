@@ -29,9 +29,8 @@ jobs:
          
       - name: Install dataset
         run: |
-         
-        
-         python downloadBasaltDataset.py
+          
+          python downloadBasaltDataset.py
          
       - name: data processing
         run: |
