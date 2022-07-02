@@ -20,7 +20,7 @@ jobs:
         run: |
      
          $CONDA/bin/conda env create --file environment_cpu.yml 
-         $CONDA/bin/conda activate hybridintelligence
+         $CONDA/bin/activate hybridintelligence
       - name: Install dependencies
         run: |
 
