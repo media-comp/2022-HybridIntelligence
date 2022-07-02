@@ -53,6 +53,7 @@ jobs:
 
       - name: Training
         run: |
+          pip install crowdai_api
           python train.py
           
       - name: Test
