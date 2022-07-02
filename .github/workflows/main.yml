@@ -23,7 +23,7 @@ jobs:
 
          pip install opencv-python chardet
          pip install -r requirements.txt
-         pip install minerl
+
 
       - name: Dataset
         run: |
